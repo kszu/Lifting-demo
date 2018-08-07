@@ -12,6 +12,11 @@ react deps
 """
 
 import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+import json as json
+import numpy as np
+import scipy.stats as stats
 
 proj = pd.read_csv('/Users/keenanszulik/Documents/libraries_2/projects_2.csv')
 npm = proj.loc[proj['Platform'] == 'NPM']
