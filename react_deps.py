@@ -51,8 +51,4 @@ deps_export = deps_export.drop_duplicates().reset_index(drop=True)
 
 deps_export.to_csv('/Users/keenanszulik/Documents/bigquery_react_deps.csv')
 
-lics = proj[['Name','Platform','Licenses','Dependent Repositories Count']].dropna()
-agpl = lics[lics['Licenses'].str.contains('AGPL')]
-agpl = agpl.sort_values('Dependent Repositories Count', ascending = False)
-
 print(deps_fb.loc[deps_fb['Repo Name'] == 'react/facebook'])
